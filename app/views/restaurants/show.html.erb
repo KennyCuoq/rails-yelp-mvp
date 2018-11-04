@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-offset-4">
+      <h1 class="text-center"><%= @restaurant.name %>
+      </h1>
+      <p>Category: <%= @restaurant.category %></p>
+      <p>Address: <%= @restaurant.address %></p>
+      <p>Phone number: <%= @restaurant.phone_number %></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consectetur incidunt tempora placeat esse possimus doloremque, quo explicabo voluptatum quisquam ad? Dolor iusto eum debitis veritatis labore officiis amet rem.</p>
+
+      <div class="text-center">
+        <%= link_to "Back", restaurants_path, class: "btn btn-primary"  %>
+        <%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-warning" %>
+        <%= link_to "Delete", delete_restaurant_path(@restaurant), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %>
+        <%= link_to "Add a review", new_review_path(@restaurant), class: "btn btn-info"  %>
+       </div>
+    </div>
+  </div>
+</div>
+
